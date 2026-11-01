@@ -1,0 +1,129 @@
+{
+  "run_id": "20261024T192312985153Z",
+  "synthetic": false,
+  "learning": false,
+  "workflow": "multi_horizon_research",
+  "config": {
+    "start": "2015-01-01",
+    "end": "2026-10-24",
+    "universe": "config/universe.csv",
+    "ticker_limit": 1,
+    "symbols": [
+      "AAPL"
+    ],
+    "benchmark": "SPY",
+    "horizons": [
+      1,
+      5,
+      21
+    ],
+    "minimum_sessions": 1260,
+    "initial_train_sessions": 756,
+    "test_fraction": 0.2,
+    "fold_sessions": 63,
+    "capital": 100000.0,
+    "threshold": 0.55,
+    "slippage_bps": [
+      5,
+      10,
+      20
+    ],
+    "seed": 42,
+    "xgboost": {
+      "n_estimators": 120,
+      "max_depth": 3,
+      "learning_rate": 0.05,
+      "subsample": 0.8,
+      "colsample_bytree": 0.8
+    },
+    "research_periods": {
+      "old_start": "2020-01-01",
+      "old_end": "2024-12-31",
+      "new_start": "2025-01-01",
+      "new_end": null,
+      "end": "latest_completed_session"
+    },
+    "tickers": [
+      "AAPL"
+    ]
+  },
+  "versions": {
+    "numpy": "2.3.0",
+    "pandas": "2.3.0",
+    "yfinance": "1.5.2",
+    "scikit-learn": "1.7.0",
+    "xgboost": "3.4.1",
+    "streamlit": "1.60.0"
+  },
+  "stages": {
+    "collect": {
+      "completed_utc": "2026-10-24T19:23:13.730439+00:00",
+      "details": {
+        "bars": 5940,
+        "sha256": "c25191460c137ee254fbd1f9bc42ed819f23702754827013bb567f7171722c1c"
+      }
+    },
+    "features": {
+      "completed_utc": "2026-10-24T19:24:08.434380+00:00",
+      "details": {
+        "eligible": [
+          "AAPL"
+        ]
+      }
+    },
+    "splits": {
+      "completed_utc": "2026-10-24T19:24:16.383631+00:00",
+      "details": {
+        "folds": 16
+      }
+    },
+    "train_h1": {
+      "completed_utc": "2026-10-24T19:24:25.504944+00:00",
+      "details": {
+        "folds": 16
+      }
+    },
+    "train_h5": {
+      "completed_utc": "2026-10-24T19:24:28.942899+00:00",
+      "details": {
+        "folds": 16
+      }
+    },
+    "train_h21": {
+      "completed_utc": "2026-10-24T19:24:32.283538+00:00",
+      "details": {
+        "folds": 16
+      }
+    },
+    "train": {
+      "completed_utc": "2026-10-24T19:24:32.293372+00:00",
+      "details": {
+        "horizons": [
+          1,
+          5,
+          21
+        ]
+      }
+    },
+    "predict": {
+      "completed_utc": "2026-10-24T19:24:37.803725+00:00",
+      "details": {
+        "rows": 14340
+      }
+    },
+    "backtest": {
+      "completed_utc": "2026-10-24T19:24:49.957608+00:00",
+      "details": {
+        "costs": [
+          0,
+          5,
+          10,
+          20
+        ],
+        "baseline_bps_per_side": 10,
+        "predictions_sha256": "9fe2eb662b81fffd423b1cd09016810b6ab190ab42a302e178a15774d67a829e"
+      }
+    }
+  },
+  "price_convention": "Yahoo split-normalized OHLC; dividends credited separately; no split applied twice"
+}

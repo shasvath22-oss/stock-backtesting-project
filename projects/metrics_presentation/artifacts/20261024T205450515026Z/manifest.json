@@ -1,0 +1,133 @@
+{
+  "run_id": "20261024T205450515026Z",
+  "synthetic": false,
+  "learning": false,
+  "workflow": "multi_horizon_research",
+  "config": {
+    "start": "2016-01-01",
+    "end": "2026-10-24",
+    "universe": "config/universe.csv",
+    "ticker_limit": 1,
+    "symbols": [
+      "AMZN"
+    ],
+    "benchmark": "SPY",
+    "horizons": [
+      1,
+      5,
+      21
+    ],
+    "minimum_sessions": 1260,
+    "initial_train_sessions": 756,
+    "test_fraction": 0.2,
+    "fold_sessions": 63,
+    "capital": 100000,
+    "threshold": 0.55,
+    "slippage_bps": [
+      5,
+      10,
+      20
+    ],
+    "seed": 42,
+    "xgboost": {
+      "n_estimators": 120,
+      "max_depth": 3,
+      "learning_rate": 0.05,
+      "subsample": 0.8,
+      "colsample_bytree": 0.8
+    },
+    "research_periods": {
+      "old_start": "2020-01-01",
+      "old_end": "2024-12-31",
+      "new_start": "2025-01-01",
+      "new_end": null,
+      "end": "latest_completed_session"
+    },
+    "tickers": [
+      "AMZN"
+    ]
+  },
+  "versions": {
+    "numpy": "2.3.0",
+    "pandas": "2.3.0",
+    "yfinance": "1.5.2",
+    "scikit-learn": "1.7.0",
+    "xgboost": "3.4.1",
+    "streamlit": "1.60.0"
+  },
+  "stages": {
+    "collect": {
+      "completed_utc": "2026-10-24T20:55:02.955231+00:00",
+      "details": {
+        "bars": 5436,
+        "sha256": "f288a3f0d5d7f76ed302384f4bd96a97cc2be225b98f552a0327108e2a89c046"
+      }
+    },
+    "features": {
+      "completed_utc": "2026-10-24T20:55:03.372092+00:00",
+      "details": {
+        "eligible": [
+          "AMZN"
+        ]
+      }
+    },
+    "splits": {
+      "completed_utc": "2026-10-24T20:55:03.439713+00:00",
+      "details": {
+        "folds": 16
+      }
+    },
+    "train_h1": {
+      "completed_utc": "2026-10-24T20:55:10.077039+00:00",
+      "details": {
+        "folds": 16
+      }
+    },
+    "train_h5": {
+      "completed_utc": "2026-10-24T20:55:16.625204+00:00",
+      "details": {
+        "folds": 16
+      }
+    },
+    "train_h21": {
+      "completed_utc": "2026-10-24T20:55:21.292487+00:00",
+      "details": {
+        "folds": 16
+      }
+    },
+    "train": {
+      "completed_utc": "2026-10-24T20:55:21.309285+00:00",
+      "details": {
+        "horizons": [
+          1,
+          5,
+          21
+        ]
+      }
+    },
+    "predict": {
+      "completed_utc": "2026-10-24T20:55:27.058033+00:00",
+      "details": {
+        "rows": 14340
+      }
+    },
+    "backtest": {
+      "completed_utc": "2026-10-24T20:55:33.569305+00:00",
+      "details": {
+        "costs": [
+          0,
+          5,
+          10,
+          20
+        ],
+        "baseline_bps_per_side": 10,
+        "predictions_sha256": "3905126ba5c7e6c0d21368407ad4a0089592a6af7b26d9151ef334f29919d46c"
+      }
+    },
+    "report": {
+      "completed_utc": "2026-10-24T20:55:33.644880+00:00",
+      "details": null
+    }
+  },
+  "price_convention": "Yahoo split-normalized OHLC; dividends credited separately; no split applied twice"
+}

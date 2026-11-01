@@ -1,0 +1,7 @@
+{
+  "old_start": "2020-01-01",
+  "old_end": "2024-12-31",
+  "new_start": "2025-01-01",
+  "new_end": null,
+  "end": "latest_completed_session"
+}

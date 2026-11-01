@@ -1,0 +1,3 @@
+ticker,first,last,sessions,eligible,required_sessions,requested_missing_sessions
+AMZN,2016-01-04,2026-10-23,2718,True,1260,0
+SPY,2016-01-04,2026-10-23,2718,True,1260,0

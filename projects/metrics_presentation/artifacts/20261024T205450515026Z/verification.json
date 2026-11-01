@@ -1,0 +1,35 @@
+{
+  "run_id": "20261024T205450515026Z",
+  "synthetic": false,
+  "completed_stages": [
+    "collect",
+    "features",
+    "splits",
+    "train_h1",
+    "train_h5",
+    "train_h21",
+    "train",
+    "predict",
+    "backtest",
+    "report"
+  ],
+  "checks": {
+    "unique_ticker_dates": true,
+    "input_hash_matches": true,
+    "sql_row_count_matches": true,
+    "future_columns_excluded_from_inputs": true,
+    "chronological_partitions": true,
+    "all_horizons_predicted": true,
+    "training_outcomes_matured": true,
+    "probabilities_valid": true,
+    "scored_outcomes_within_phase": true,
+    "all_costs_present": true,
+    "spy_comparison_present": true,
+    "risk_metrics_finite": true,
+    "costs_reuse_predictions": true,
+    "sample_position_accounting": true,
+    "sample_portfolio_reconciliation": true,
+    "sample_spy_dates_identical": true
+  },
+  "passed": true
+}

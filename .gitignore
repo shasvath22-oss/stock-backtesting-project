@@ -1,0 +1,26 @@
+﻿.deps/
+.venv/
+__pycache__/
+.pytest_cache/
+*.egg-info/
+data/
+/artifacts/
+.streamlit/secrets.toml
+
+# Local packages and generated files
+tmp/
+output/
+*.log
+*.pyc
+*.pyo
+
+# Local credentials and editor settings
+.env
+.env.*
+!.env.example
+.aws/
+.codex/
+.agents/
+.vscode/
+.idea/
+

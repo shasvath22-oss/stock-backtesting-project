@@ -1,0 +1,3 @@
+ticker,first,last,sessions,eligible,required_sessions,requested_missing_sessions
+AAPL,2015-01-02,2026-10-23,2970,True,1260,0
+SPY,2015-01-02,2026-10-23,2970,True,1260,0

@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "trend-analyzer"
+version = "0.1.0"
+description = "Independent quantitative finance research on market direction, trading costs, and investment risk"
+requires-python = ">=3.11"
+dependencies = [
+  "numpy>=2.0,<3", "pandas>=2.2,<3", "pyarrow>=18",
+  "yfinance>=1.0,<2", "scikit-learn>=1.6,<2", "xgboost>=3.0,<4",
+  "pandas-market-calendars>=5,<6", "joblib>=1.4", "streamlit>=1.57,<2"
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+
+[tool.setuptools.packages.find]
+include = ["trend_analyzer*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
